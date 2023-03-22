@@ -4,11 +4,7 @@ const configuration=new Configuration({
     apiKey:process.env.OPENAI_API_KEY,
 
 });
-const openai=new OpenAIApi(Configuration);
-
-
-
-
+const openai=new OpenAIApi(configuration);
 
 
 const generateImage=async(req,res)=>{
@@ -48,4 +44,4 @@ const imageSize=size==='small'?'256x256' :size==='medium'?'512x512':'1024x1024';
     };
 
 
-module.exports={generateimage};
+module.exports={generateImage};
